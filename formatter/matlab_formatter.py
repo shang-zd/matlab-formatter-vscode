@@ -5,11 +5,11 @@ import sys
 
 class Formatter:
     # control sequences
-    ctrl_1line = r'(^|\s*)(if|while|for)(\s+\S.*)(end|endif|endwhile|endfor)(\s*$)'
-    ctrlstart = r'(^|\s*)(function|if|while|for|try)(\s+\S.*|\s*$)'
+    ctrl_1line = r'(^|\s*)(if|while|for|parfor)(\s+\S.*)(end|endif|endwhile|endfor)(\s*$)'
+    ctrlstart = r'(^|\s*)(function|if|while|for|parfor|try)(\s+\S.*|\s*$)'
     ctrlstart_2 = r'(^|\s*)(switch)(\s+\S.*|\s*$)'
     ctrlcont = r'(^|\s*)(elseif|else|case|otherwise|catch)(\s+\S.*|\s*$)'
-    ctrlend = r'(^|\s*)(end|endfunction|endif|endwhile|endfor|endswitch)(\s+\S.*|\s*$)'
+    ctrlend = r'(^|\s*)(end|endfunction|endif|endwhile|endfor|endparfor|endswitch)(\s+\S.*|\s*$)'
     matrixstart = r'(^|\s*)(.*)(\[[^\]]*)(\s*$)'
     matrixend = r'(^|\s*)(.*)(\].*)(\s*$)'
     linecomment = r'(^|\s*)%.*$'
